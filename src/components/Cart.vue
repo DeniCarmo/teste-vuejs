@@ -1,0 +1,52 @@
+<template>
+    <div class="cart">
+        <div class="cart-content">
+            <i class="cart-icon">
+                <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.58331 19.5C6.39165 19.5 5.42748 20.475 5.42748 21.6666C5.42748 22.8583 6.39165 23.8333 7.58331 23.8333C8.77498 23.8333 9.74998 22.8583 9.74998 21.6666C9.74998 20.475 8.77498 19.5 7.58331 19.5ZM1.08331 2.16663V4.33329H3.24998L7.14998 12.5558L5.68748 15.21C5.51415 15.5133 5.41665 15.8708 5.41665 16.25C5.41665 17.4416 6.39165 18.4166 7.58331 18.4166H20.5833V16.25H8.03831C7.88665 16.25 7.76748 16.1308 7.76748 15.9791L7.79998 15.8491L8.77498 14.0833H16.8458C17.6583 14.0833 18.3733 13.6391 18.7416 12.9675L22.62 5.93663C22.7066 5.78496 22.75 5.60079 22.75 5.41663C22.75 4.82079 22.2625 4.33329 21.6666 4.33329H5.64415L4.62581 2.16663H1.08331ZM18.4166 19.5C17.225 19.5 16.2608 20.475 16.2608 21.6666C16.2608 22.8583 17.225 23.8333 18.4166 23.8333C19.6083 23.8333 20.5833 22.8583 20.5833 21.6666C20.5833 20.475 19.6083 19.5 18.4166 19.5Z" fill="#363636"/>
+                </svg>
+            </i>
+            <span class="cart-title">Meu Carrinho</span>
+        </div>
+    </div>
+</template>
+
+<script>
+export default{
+    name: 'Cart',
+    cartModal: false
+}
+</script>
+
+<style lang="scss" scoped>
+@import '../_main.scss';
+
+.cart{
+    display: flex;
+    cursor: pointer;
+
+    .cart{
+
+        &-content{
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-start;
+        }
+
+        &-icon{
+            width: 24px;
+            height: 24px;
+
+            svg{
+                width: 24px;
+                height: 24px;
+                @include svg-color($black);
+            }
+        }
+
+        &-title{
+            @include text(12, 14, 400, $text-bg6, $font-family);
+        }
+    }
+}
+</style>
